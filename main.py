@@ -16,7 +16,7 @@ app.include_router(router=router,tags=["solution"])
 
 
 if __name__ == "__main__":
-    debug = True 
+    debug = True
     if debug:
         from project.settings.develop import (
             CORSMiddleware,ORIGINS,CREDENTIALS,METHODS,HEADERS,
@@ -35,16 +35,16 @@ if __name__ == "__main__":
         from project.settings.production import (
             TrustedHostMiddleware,GZipMiddleware,CORSMiddleware,
             HEADERS,ORIGINS_PRO,HOST_PRO,PORT_PRO,DEBUG_PRO,ALLOWED_PRO,
-            CREDENTIALS_PRO
+            CREDENTIALS_PRO,METHODS_PRO
         )
 
         app.debug = DEBUG_PRO
         host = HOST_PRO
-        port = PORT
+        port = PORT_PRO
         app.add_middleware(
             CORSMiddleware,allow_headers=HEADERS,
             allow_origins=ORIGINS_PRO,allow_credentials=CREDENTIALS_PRO,
-            allow_methods=METHODS
+            allow_methods=METHODS_PRO
         )
         app.add_middleware(
             TrustedHostMiddleware,allowed_hosts=ALLOWED_PRO

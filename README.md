@@ -64,6 +64,11 @@ Content-Type: application/json
 }
 ```
 
+### Run test
+```bash
+python -m unittest project/tests/test_solution.py
+```
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or want to enhance the endpoint, feel free to submit a pull request. Please ensure that you follow the existing code style and write unit tests for any new features.

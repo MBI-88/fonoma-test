@@ -9,4 +9,4 @@ router = APIRouter()
 @router.post("/solution")
 async def solution(data:Serializer) -> Response:
     result = process_orders(data.orders,data.criterion)
-    return Response(content=result,status_code=status.HTTP_200_OK)
+    return Response(content=str(result),status_code=status.HTTP_200_OK)

@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  fonoma-test:
+    build: fonoma-test
+    image: fonoma-test:latest
+    ports:
+      - "80:80"
+    env_file:
+      - fonoma-test/.env
+
+ 
