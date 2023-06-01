@@ -3,7 +3,6 @@ import uvicorn as server
 from api.views import router
 
 
-
 # Api
 app = FastAPI(
     debug=True,title="Fonoma Api",
@@ -16,7 +15,7 @@ app.include_router(router=router,tags=["solution"])
 
 
 if __name__ == "__main__":
-    debug = True
+    debug = False
     if debug:
         from project.settings.develop import (
             CORSMiddleware,ORIGINS,CREDENTIALS,METHODS,HEADERS,
