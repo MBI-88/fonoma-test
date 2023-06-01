@@ -59,7 +59,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-    "result":1299.90,
+    "result":1299.69,
    
 }
 ```
